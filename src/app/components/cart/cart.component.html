@@ -10,8 +10,9 @@
       <h2>{{item.title}}</h2>
       <p class="price"><strong style="color: green">Price:</strong>{{item.price}}</p>
       <p>{{item.description}}</p>
-      <button (click)="removeItem(item)">
-        <i class="material-icons">delete</i>
+      <button (click)="removeItem(item)" class="delete">
+        Delete
+        <!-- <i class="material-icons">delete</i> -->
       </button>
     </div>
   </div>
@@ -32,7 +33,7 @@
       <img src="..\assets\images\products.png" alt="" />
       <h4>Your cart is empty!</h4>
       <h6>Add item to it now</h6>
-      <button routerLink="/products" class="btn btn-primary">Shop Now</button>
+      <button routerLink="/products" class="btn">Shop Now</button>
     </div>
   </div>
 </ng-container>

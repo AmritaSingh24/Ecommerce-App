@@ -14,11 +14,10 @@
 </div>
 <div class="main">
     <div class="row">
-        <div class="col" *ngFor="let item of filterCategory">
+        <div class="col" *ngFor="let item of filterCategory" routerLink="/order/{{item.id}}">
             <div class="img"><img src="{{ item.image }}" alt=""></div>
             <h4>{{ item.title }}</h4>
-            <p><strong>Price:</strong>${{ item.price }}</p>
-            <button routerLink="/order/{{item.id}}">Shop Now!!</button>
+            <p><strong>Price:</strong> ${{ item.price }}</p>
         </div>
     </div>
 </div>

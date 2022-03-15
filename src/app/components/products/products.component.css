@@ -29,7 +29,10 @@
 }
 .col {
   width: 250px;
-  padding: 5px;
+  height: 320px;
+  padding: 10px;
+  border: 1px solid #047bd5;
+  cursor: pointer;
 }
 .col .img {
   display: flex;
@@ -45,13 +48,6 @@
   transition: 0.3s ease-in-out;
   transform: scale(1.1);
 }
-button {
-  border: 0;
-  outline: 0;
-  background: #047bd5;
-  width: 100%;
-  color: #fff;
+p {
   font-size: 18px;
-  padding: 0.7rem;
-  cursor: pointer;
 }

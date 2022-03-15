@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CartService } from 'src/app/services/cart.service';
 import { ProductService } from 'src/app/services/product.service';
 
 @Component({
@@ -9,7 +10,8 @@ import { ProductService } from 'src/app/services/product.service';
 export class ProductsComponent implements OnInit {
   productList!: any;
   filterCategory: any;
-  constructor(private productService: ProductService) {}
+  constructor(private productService: ProductService,
+    private cartService : CartService) {}
 
   ngOnInit(): void {
     // get all products
@@ -25,6 +27,7 @@ export class ProductsComponent implements OnInit {
         }
       });
     });
+    this.cartService.getProduct();
   }
   filter(category: string) {
     this.filterCategory = this.productList.filter((item: any) => {

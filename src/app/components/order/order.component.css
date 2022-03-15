@@ -12,11 +12,22 @@
   margin: 2rem 0;
   display: flex;
 }
+@media screen and (max-width: 600px) {
+  .flex {
+    flex-direction: column;
+  }
+}
+.left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .right {
   margin-left: 1.5rem;
 }
 h2 {
   font-size: 18px;
+  margin-top: 1rem;
 }
 img {
   width: 250px;
@@ -24,6 +35,7 @@ img {
 }
 .price {
   font-size: 25px;
+  margin: 1.5rem 0;
 }
 button {
   outline: 0;
@@ -31,6 +43,7 @@ button {
   color: #fff;
   font-size: 20px;
   font-weight: 600;
+  cursor: pointer;
 }
 .cart {
   background-color: #f8e831;
@@ -40,4 +53,16 @@ button {
 .buy {
   background-color: #f7a200;
   padding: 12px 30px;
+}
+@media screen and (max-width: 550px) {
+  button {
+    font-size: 16px;
+  }
+  .cart {
+    padding: 8px 15px;
+    margin-right: 0.7rem;
+  }
+  .buy {
+    padding: 10px 20px;
+  }
 }

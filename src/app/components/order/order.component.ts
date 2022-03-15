@@ -26,6 +26,8 @@ export class OrderComponent implements OnInit {
       (res)=>{
         this.productData = res;
     })
+    this.cartService.setCartItem();
+    this.cartService.getProduct();
   }
 
   addToCart(productData:any){
