@@ -3,21 +3,19 @@ import { HttpClient } from '@angular/common/http';
 import { single } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ProductService {
-
   allProducts = 'https://fakestoreapi.com/products';
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) {}
 
-  getAllProducts(){
+  getAllProducts() {
     return this.http.get(this.allProducts);
   }
 
-  getSingleProduct(id: any){
+  getSingleProduct(id: any) {
     let singleProduct = `https://fakestoreapi.com/products/${id}`;
     return this.http.get(singleProduct);
   }
-
 }

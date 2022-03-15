@@ -9,17 +9,17 @@ import { GuardGuard } from './guards/guard.guard';
 
 const routes: Routes = [
   {
-    path: 'login', 
+    path: 'login',
     component: LoginComponent,
-    canActivate: [GuardGuard]
+    canActivate: [GuardGuard],
   },
   {
-    path: 'cart', 
-    component:CartComponent
+    path: 'cart',
+    component: CartComponent,
   },
   {
-    path: 'products', 
-    component: ProductsComponent
+    path: 'products',
+    component: ProductsComponent,
   },
   {
     path: '',
@@ -28,13 +28,13 @@ const routes: Routes = [
   },
   {
     path: 'order/:id',
-    component:OrderComponent,
-    canActivate: [AuthGuardGuard]
-  }
+    component: OrderComponent,
+    canActivate: [AuthGuardGuard],
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

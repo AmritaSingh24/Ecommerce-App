@@ -7,26 +7,26 @@ import { BehaviorSubject } from 'rxjs';
 export class CartService {
   cartItemList: any = [];
   productList: BehaviorSubject<any> = new BehaviorSubject([]);
-  getCart:any = localStorage.getItem('cart');
+  getCart: any = localStorage.getItem('cart');
   constructor() {}
 
   setProduct(item: any) {
     localStorage.setItem('cart', JSON.stringify(item));
   }
 
-  getProduct( ) {
-      this.productList.next(JSON.parse(localStorage.getItem('cart')));
+  getProduct() {
+    this.productList.next(JSON.parse(localStorage.getItem('cart')));
   }
 
   setCartItem() {
-      this.cartItemList = JSON.parse(localStorage.getItem('cart'));
+    this.cartItemList = JSON.parse(localStorage.getItem('cart'));
   }
 
   addToCart(product: any) {
     this.cartItemList.push(product);
     this.setProduct(this.cartItemList);
     this.getTotalPrice();
-    this.getProduct();  
+    this.getProduct();
   }
 
   getTotalPrice(): number {

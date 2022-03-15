@@ -4,12 +4,14 @@
   </button>
   <div class="flex" *ngFor="let item of products">
     <div class="left">
-      <img src="{{item.image}}" alt="" />
+      <img src="{{ item.image }}" alt="" />
     </div>
     <div class="right">
-      <h2>{{item.title}}</h2>
-      <p class="price"><strong style="color: green">Price:</strong>{{item.price}}</p>
-      <p>{{item.description}}</p>
+      <h2>{{ item.title }}</h2>
+      <p class="price">
+        <strong style="color: green">Price:</strong>{{ item.price }}
+      </p>
+      <p>{{ item.description }}</p>
       <button (click)="removeItem(item)" class="delete">
         Delete
         <!-- <i class="material-icons">delete</i> -->
@@ -17,10 +19,16 @@
     </div>
   </div>
   <div class="button">
-    <button style="background-color: green;" (click)="emptyCart()">Empty Cart</button>
-    <button style="background-color: #f7a200;">Place order</button>
-    <button routerLink="/products" style="background: #047bd5;">Shop More</button>
-    <strong style="white-space: nowrap">Grand Total : $ {{grandTotal}}</strong>
+    <button style="background-color: green" (click)="emptyCart()">
+      Empty Cart
+    </button>
+    <button style="background-color: #f7a200">Place order</button>
+    <button routerLink="/products" style="background: #047bd5">
+      Shop More
+    </button>
+    <strong style="white-space: nowrap"
+      >Grand Total : $ {{ grandTotal }}</strong
+    >
   </div>
 </div>
 

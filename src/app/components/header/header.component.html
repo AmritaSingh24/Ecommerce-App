@@ -3,15 +3,20 @@
     <div class="logo">Flipkart</div>
     <ul class="list flex">
       <li>
-        <a routerLink="/login" class="login" *ngIf="!loginService.loggedIn()">Login</a>
-        <a class="login"
-        *ngIf="loginService.loggedIn()"
-        (click)="loginService.logoutUser()">Logout</a>
+        <a routerLink="/login" class="login" *ngIf="!loginService.loggedIn()"
+          >Login</a
+        >
+        <a
+          class="login"
+          *ngIf="loginService.loggedIn()"
+          (click)="loginService.logoutUser()"
+          >Logout</a
+        >
       </li>
       <li>
         <a routerLink="/cart" class="cart">
           <i class="material-icons">add_shopping_cart</i>
-          <span class="badge">{{totalItem}}</span>
+          <span class="badge">{{ totalItem }}</span>
         </a>
       </li>
     </ul>
