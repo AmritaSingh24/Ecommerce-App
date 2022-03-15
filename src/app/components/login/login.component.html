@@ -1,0 +1,49 @@
+<mat-card class="container">
+  <mat-card-content>
+    <div class="header">
+      <h1>Login</h1>
+    </div>
+    <form [formGroup]="loginForm">
+      <div class="username-input">
+        <mat-form-field class="full-width" appearance="outline">
+          <mat-label>Username</mat-label>
+          <input formControlName="userName" matInput required trimValue />
+          <mat-icon matSuffix class="secondary-text">account_circle</mat-icon>
+          <mat-error *ngIf="loginForm.get('userName')?.errors?.['required']">
+            Required Username
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field class="full-width" appearance="outline">
+          <mat-label>Password</mat-label>
+          <input
+            formControlName="password"
+            matInput
+            [type]="passwordVisible ? 'text' : 'password'"
+            required
+          />
+          <mat-icon
+            matSuffix
+            class="secondary-text cursor-pointer"
+            (click)="passwordVisible = !passwordVisible"
+            [title]="passwordVisible ? 'Hide Password' : 'Show Password'"
+          >
+            {{ passwordVisible ? "visibility" : "visibility_off" }}
+          </mat-icon>
+          <mat-error *ngIf="loginForm.get('password')?.errors?.['required']">
+            Required password
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <button
+        mat-flat-button
+        routerLink="/products"
+        [disabled]="loginForm.invalid"
+        (click)="submit()"
+      >
+        Login
+      </button>
+    </form>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,38 @@
+<div class="container" *ngIf="products.length != 0">
+  <button class="home" routerLink="/products">
+    <i class="material-icons">home</i>
+  </button>
+  <div class="flex" *ngFor="let item of products">
+    <div class="left">
+      <img src="{{item.image}}" alt="" />
+    </div>
+    <div class="right">
+      <h2>{{item.title}}</h2>
+      <p class="price"><strong style="color: green">Price:</strong>{{item.price}}</p>
+      <p>{{item.description}}</p>
+      <button (click)="removeItem(item)">
+        <i class="material-icons">delete</i>
+      </button>
+    </div>
+  </div>
+  <div class="button">
+    <button style="background-color: green;" (click)="emptyCart()">Empty Cart</button>
+    <button style="background-color: #f7a200;">Place order</button>
+    <button routerLink="/products" style="background: #047bd5;">Shop More</button>
+    <strong style="white-space: nowrap">Grand Total : $ {{grandTotal}}</strong>
+  </div>
+</div>
+
+<ng-container *ngIf="products.length == 0">
+  <div class="container">
+    <div class="card">
+      <h2 class="card-title">My Cart</h2>
+    </div>
+    <div class="center">
+      <img src="..\assets\images\products.png" alt="" />
+      <h4>Your cart is empty!</h4>
+      <h6>Add item to it now</h6>
+      <button routerLink="/products" class="btn btn-primary">Shop Now</button>
+    </div>
+  </div>
+</ng-container>

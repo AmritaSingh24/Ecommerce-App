@@ -1,0 +1,25 @@
+<div class="container">
+    <button class="home" routerLink="/products">
+        <i class="material-icons">home</i>
+    </button>
+  <div class="flex">
+    <div class="left">
+      <img src="{{productData.image}}" alt="" />
+    </div>
+    <div class="right">
+      <h2>{{productData.title}}</h2>
+      <p class="price"><strong style="color: green;">Price:</strong> ${{productData.price}}</p>
+      <p>
+        {{productData.description}}
+      </p>
+    </div>
+  </div>
+  <div class="button">
+    <button class="cart" (click)="addToCart(productData)">
+      <i class="material-icons">add_shopping_cart</i> ADD TO CART
+    </button>
+    <button class="buy">
+        BUY NOW
+    </button>
+  </div>
+</div>

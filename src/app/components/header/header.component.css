@@ -1,0 +1,41 @@
+nav {
+  width: 90%;
+  margin: auto;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  color: #fff;
+  font-size: 30px;
+  font-style: italic;
+  font-weight: 700;
+}
+ul {
+  display: flex;
+  list-style: none;
+  gap: 0 30px;
+}
+li a {
+  text-decoration: none;
+}
+.login {
+  background-color: #fff;
+  color: #047bd5;
+  padding: 5px 15px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.cart {
+  color: #fff;
+}
+.badge {
+  background-color: rgb(243, 61, 61);
+  border-radius: 3px;
+  padding: 2px 5px;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+}

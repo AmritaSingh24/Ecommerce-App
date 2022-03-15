@@ -1,0 +1,47 @@
+.container {
+  width: 90%;
+  margin: auto;
+}
+button {
+  outline: 0;
+  border: 0;
+}
+.home {
+  padding: 5px 7px;
+  border-radius: 100%;
+  color: #fff;
+  background-color: #047bd5;
+}
+.flex {
+  margin: 2rem 0;
+  display: flex;
+}
+.right {
+  margin-left: 1.5rem;
+}
+h2 {
+  font-size: 18px;
+}
+img {
+  width: 250px;
+  height: 250px;
+}
+.price {
+  font-size: 25px;
+}
+.button {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 90%;
+  margin: auto;
+  font-size: 20px;
+}
+.button button {
+  padding: 10px 25px;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  font-size: 15px;
+  color: #fff;
+}

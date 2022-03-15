@@ -1,0 +1,22 @@
+mat-card {
+  max-width: 600px;
+  margin: 3rem auto;
+  text-align: center;
+  max-height: 600px;
+}
+
+.header {
+  text-align: center;
+}
+
+.full-width {
+  width: 80%;
+}
+
+.forgot-password {
+  padding-left: 0;
+}
+
+.username-input {
+  padding-top: 10px;
+}

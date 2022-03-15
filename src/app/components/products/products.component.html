@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="item" (click)="filter('')">
+        <a>All Products</a>
+    </div>
+    <div class="item" (click)="filter('electronics')">
+        <a>Electronics</a>
+    </div>
+    <div class="item" (click)="filter('fashion')">
+        <a>Fashion</a>
+    </div>
+    <div class="item" (click)="filter('jewelery')">
+        <a>Jewellery</a>
+    </div>
+</div>
+<div class="main">
+    <div class="row">
+        <div class="col" *ngFor="let item of filterCategory">
+            <div class="img"><img src="{{ item.image }}" alt=""></div>
+            <h4>{{ item.title }}</h4>
+            <p><strong>Price:</strong>${{ item.price }}</p>
+            <button routerLink="/order/{{item.id}}">Shop Now!!</button>
+        </div>
+    </div>
+</div>
